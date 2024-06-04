@@ -1,0 +1,278 @@
+body{
+    background: url("../Images/image.jpg")no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+    overflow: hidden;
+}
+
+.orario{
+    position: absolute;
+    left: 34%;
+    top: 24%;
+    width: 5000px;
+    height: 200px;
+    margin-left: -10px;
+    /* -1/2 width */
+    margin-top: -10px;
+    /* -1/2 height */
+    font-size: 50px;
+    color: white;
+    user-select: none;
+}
+
+.topfooter{
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 0;
+    height: 10px;
+    background-color: #4c535b;
+    z-index: 3;
+}
+
+.cartella{
+    position: absolute;
+    background-color: #2C333A;
+    border: solid 3px #5a6065;
+    border-radius: 20px;
+    height: 100px;
+    width: 100px;
+    top: 200px;
+    left: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2,1fr);
+    cursor: pointer;
+    transition: ease-out 0.1s,height 0.1s linear 0.1s;
+}   
+
+.cartella.aperta{
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2,1fr);
+    height: 300px;
+    width: 300px;
+}
+
+.cartella>.terminal-2ic{
+    position: relative;
+    background: url("../Images/terminal-icon.png") no-repeat center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    grid-column: 1;
+    grid-row: 1;
+    cursor: pointer;
+}
+
+.cartella>.google{
+    position: relative;
+    background: url("../Images/google.png") no-repeat center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    grid-column: 2;
+    grid-row: 1;
+    border-radius: 30px;
+    cursor: pointer;
+}   
+
+.cartella>.youtube{
+    position: relative;
+    background: url("../Images/youtube.png") no-repeat center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    grid-column: 1;
+    grid-row: 2;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+
+
+.rightfooter{
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 80px;
+    background-color: #2C333A;
+    z-index: 3;
+    border-left: solid 4px #5a6065;
+}
+
+.rightfooter>.terminal-icon {
+    position: absolute;
+    background: url("../Images/terminal-icon.png") no-repeat center;
+    background-size: cover;
+    width: 70px;
+    height: 60px;
+    top: 70px;
+    left: 4px;
+    border: solid 1px #5a6065;
+    user-select: none;
+    padding-bottom: 9px;
+    border-radius: 13px;
+    opacity: 0.5; /* Opacità iniziale */
+    transition: opacity 0.3s;
+    cursor: pointer;
+}
+
+.rightfooter>.terminal-icon.evidenziato {
+    opacity: 1; /* Opacità al 100% quando evidenziato */
+    background-color: #4c535b;
+}
+
+.rightfooter>.terminal-icon:hover {
+    opacity: 0.75; /* Opacità al passaggio del mouse */
+    background-color: rgba(145, 157, 168, 0.123);
+}
+
+
+.container{
+    position: relative;
+    left: 400px;
+    top: 260px;
+    height: 400px;
+    width: 700px;
+    resize: both;
+    overflow: hidden;
+    min-width: 400px;
+    min-height: 100px;
+    margin-left: -10px;
+    margin-top: -10px;
+    justify-content: center;
+    border-bottom: solid 8px rgb(44, 51, 58,0.20);
+    border-right: solid 8px rgb(44, 51, 58, 0.20);
+}
+
+.container.hidden {
+    visibility: hidden;
+}
+
+.container.fullscreen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    resize: none;
+    z-index: 1000;
+}
+
+.container>.terminal-header{
+    position: relative;
+    height: 30px;
+    background-color: #2C333A;
+    cursor: move;
+    border-top: solid 1px white;
+    border-right: solid 1px white;
+    border-left: solid 1px white;
+}
+
+.container>.terminal-header:active+.terminal-body{
+    opacity: 0.50;
+}
+
+.container>.terminal-header:active{
+    opacity: 0.50;
+}
+
+.container>.terminal-header>.Name_app{
+    display: inline;
+    color: white;
+    line-height: 30px;
+    padding-left: 3px;
+    user-select: none;
+    z-index: 2;
+}
+
+.container>.terminal-header>.buttons{
+    color: white;
+    user-select: none;
+}
+.container>.terminal-header>.buttons>._{
+    z-index: 2;
+    position: absolute;
+    right: 55px;
+    top: 15px;
+    height: 20px;
+    width: 20px;
+    margin-left: -10px;
+    margin-top: -12px;
+    border: solid #6c757e 1px;
+    text-align: center;
+}
+
+.container>.terminal-header>.buttons>.▢{
+    z-index: 2;
+    position: absolute;
+    right: 30px;
+    top: 15px;
+    height: 20px;
+    width: 20px;
+    margin-left: -10px;
+    margin-top: -12px;
+    border: solid #6c757e 1px;
+    text-align: center;
+}
+
+.container>.terminal-header>.buttons>.X{
+    z-index: 2;
+    position: absolute;
+    right: 5px;
+    top: 15px;
+    height: 20px;
+    width: 20px;
+    margin-left: -10px;
+    margin-top: -12px;
+    border: solid #6c757e 1px;
+    text-align: center;
+}
+
+.container>.terminal-header>.buttons>.X:hover{
+    background-color: red;
+    cursor: pointer;
+}
+.container>.terminal-header>.buttons>.▢:hover{
+    background-color: #6c757e;
+    cursor: pointer;
+}
+.container>.terminal-header>.buttons>._:hover{
+    background-color: #6c757e;
+    cursor: pointer;
+}
+
+.container>.terminal-body{
+    position: absolute;
+    background-color: white;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 28px;
+    overflow: auto;
+    scrollbar-width: thin;
+    word-wrap:break-word;
+    opacity: 0.94;
+}
+
+.container>.terminal-body>.riga.container>.terminal-body>.riga{
+    padding: 1px;
+}
+
+.container>.terminal-body>.riga>.command::before{
+    content: "text@Siummico: ";
+    user-select: none;
+}
+
+.container>.terminal-body>.riga>.command{    
+    outline: none;
+    border: none;
+    padding: 5px;
+    caret-color: transparent;
+}
+
+.output {
+    color: green;
+    padding: 5px;
+}
